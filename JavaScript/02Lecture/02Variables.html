@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables In JS</title>
+</head>
+<body>
+    <h1>Variables In JS</h1>
+
+    <p>Variables is like a container in which we store some data (Any typeof Data).</p>
+    <p>Rulesto declare Variables</p>
+    <ul>
+        <li>Always Start with <mark> _, alpha, $ </li>
+    </ul>
+
+    <p>we have three types of Variables (Two Variables and One Constant)</p>
+    <ul>
+        <li>var -> It was used Before ES6</li>
+        <li>let -> It was Introduced in ES6</li>
+        <li>const -> Constant Variable</li>
+    </ul>
+
+
+    <script>
+        // Variables In JS
+
+
+        // 1. var 
+
+        // var ramesh_marks;       // Declaration
+        // ramesh_marks = 80       // Assignment
+
+        var ramesh_marks = 80;         // Initialization and Declaration 
+        // var ramesh_marks = 30;         // Re - Declaration is Possible
+        ramesh_marks = 95;              // Re-Assignment Is Possible
+        console.log(ramesh_marks);
+
+
+
+
+        // 2. let 
+
+
+        let name = "Ramesh";        // Initialization and Declaration 
+        // let name = "Suresh";     // Re - Declaration is not Possible
+        name = "Ramesh kumar"       // Re-Assignment Is Possible
+        console.log(name);
+        
+
+
+        // 3. const 
+
+
+        const fav_player = "Mahendra Singh Dhoni";          // Initialization and Declaration
+        // const fav_player = "Rohit Sharma";               // Re - Declaration is not Possible
+        // fav_player = "Thala for Reason"                     // Re-Assignment Is Possible
+        console.log(fav_player);    
+
+
+
+        // Scope
+
+
+        // {} => Block 
+
+        // var is globle scoped
+        // let is block scoped
+        // const is block scoped
+
+        const b = 10;
+
+        console.log(b);
+        
+
+        {
+            const c = 50;
+            console.log(b);
+            console.log(c);
+            
+        }
+        
+        console.log(c);
+
+
+        
+        
+    </script>
+
+</body>
+</html>
