@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pattern using Loop</title>
+  </head>
+  <body>
+    <h1>Pattern using Loop</h1>
+
+    <script>
+      for (let i = 1; i <= 10; i++) {
+        for (let k = 10; k >= i; k--) {
+          document.write("&nbsp;");
+          // document.write("&nbsp;&nbsp;");
+        }
+        for (let j = 1; j <= i; j++) {
+          document.write("*");
+          // document.write(j)
+        }
+
+        document.write("<br>");
+      }
+
+      for (let i = 1; i <= 10; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write("*");
+          // document.write(j)
+        }
+
+        document.write("<br>");
+      }
+
+
+      for (let i = 1; i <= 10; i++) {
+        for (let k = 10; k >= i; k--) {
+          document.write("&nbsp;&nbsp;");
+        }
+        for (let j = 1; j <= i; j++) {
+          document.write("*");
+          // document.write(j)
+        }
+
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>
