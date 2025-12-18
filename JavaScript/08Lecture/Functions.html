@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions In JS</title>
+  </head>
+  <body>
+    <h1>Functions In JS</h1>
+    <p>
+      Function Declaration are Hoisted but Function Expression are Not Hoisted.
+    </p>
+
+    <script>
+      // Function Declaration
+
+      // greet();
+
+      function greet() {
+        console.log("Good Morning");
+      }
+
+      // function calling
+
+      greet();
+
+      // function Expression
+
+      // myGreet();
+
+      // 1. Anonymous Function
+
+      const myGreet = function () {
+        console.log("Namaste");
+      };
+
+      // function calling
+
+      myGreet();
+
+      // 2. Arrow Function
+
+      const greetArrow = () => {
+        console.log("Namaste Bharat");
+      };
+
+      greetArrow();
+
+      // IIFE Function
+
+      (function name(params) {
+        console.log("Hello IIFE");
+      })();
+
+    //   (function () {
+    //     // This code runs immediately
+    //     let privateVar = "I am hidden!";
+    //     console.log(privateVar); // "I am hidden!"
+    //   })();
+    </script>
+  </body>
+</html>
+
+<!-- What is 'This' Keyword and What is the use of 'this' Keyword in Function ? -->
