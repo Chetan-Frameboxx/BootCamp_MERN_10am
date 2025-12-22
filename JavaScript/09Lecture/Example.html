@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function With Parameters</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <h1>Function With Parameters</h1>
+
+
+    <div id="box"></div>
+
+    <script>
+      let box = document.getElementById("box");
+
+
+      box.addEventListener("mouseenter", function () {
+        document.getElementById("body").style.backgroundColor = "gold";
+        document.getElementById("body").style.color = "black";
+      });
+
+      box.addEventListener("mouseleave", function () {
+        document.getElementById("body").style.backgroundColor = "black";
+        document.getElementById("body").style.color = "white";
+      });
+
+     
+    </script>
+  </body>
+</html>
