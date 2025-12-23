@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <h1>Form Validation</h1>
+
+    <input type="text" name="username" id="username" onblur="validation(this, 'error1', 'Username')" />
+    <span id="error1"></span>
+    <br />
+    <br />
+    <input
+      type="password"
+      name="userpass"
+      id="userpass"
+      onblur="validation(this, 'error2', 'Password')"
+    />
+    <span id="error2"></span>
+    <br />
+    <br />
+
+    <script>
+    //   let username = document.getElementById("username");
+    //   let userpass = document.getElementById("userpass");
+
+      function validation(e, spnId, msg) {
+        if (e.value == "") {
+            document.getElementById(spnId).innerText = `${msg} is required`;
+            document.getElementById(spnId).style.color = "red";
+        } else {
+            document.getElementById(spnId).innerText = "";
+
+        }
+      }
+    </script>
+  </body>
+</html>
