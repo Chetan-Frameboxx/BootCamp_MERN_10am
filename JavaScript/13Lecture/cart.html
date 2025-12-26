@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <h1>Cart</h1>
+    <ul>
+      <li>Local Storage</li>
+      <span id="para1"></span>
+      <li>Session Storage</li>
+      <span id="para2"></span>
+    </ul>
+
+    <script>
+        // 1. Local Storage
+        let dataLocal = JSON.parse(localStorage.getItem("dataInput"));
+        document.getElementById("para1").innerText = dataLocal.useremail;
+
+        // 2. Local Storage
+        let dataSession = JSON.parse(sessionStorage.getItem("dataInput"));
+        document.getElementById("para2").innerText = dataSession.username;
+        console.log(dataLocal);
+        console.log(dataSession);
+    </script>
+  </body>
+</html>

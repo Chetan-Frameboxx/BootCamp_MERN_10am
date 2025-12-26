@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storage</title>
+  </head>
+  <body>
+    <h1>Storage</h1>
+    <input type="text" name="uname" id="inpData" />
+    <button id="btn">Send & Get Data</button>
+    <ul>
+      <li>Local Storage</li>
+      <span id="para1"></span>
+      <li>Session Storage</li>
+      <span id="para2"></span>
+    </ul>
+    <hr />
+    <img src="../../Image/storage.png" width="500px" alt="">
+    <hr />
+
+    <script>
+      // 1. Local Storage
+
+      btn.addEventListener("click", function name(params) {
+        let inpData = document.getElementById("inpData").value;
+        localStorage.setItem("inpData", inpData);
+        let dataLocal = localStorage.getItem("inpData");
+        document.getElementById("para1").innerText = dataLocal;
+
+        // 2. Local Storage
+
+        sessionStorage.setItem("inpData", inpData);
+        let dataSession = sessionStorage.getItem("inpData");
+        document.getElementById("para2").innerText = dataSession;
+        console.log(dataLocal);
+        console.log(dataSession);
+      });
+
+      //   localStorage.clear()
+    </script>
+  </body>
+</html>

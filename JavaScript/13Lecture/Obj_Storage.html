@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storage</title>
+  </head>
+  <body>
+    <h1>Storage</h1>
+    <input type="text" name="uname" id="username" />
+    <input type="email" name="uemail" id="useremail" />
+    <button id="btn">Send & Get Data</button>
+    <ul>
+      <li>Local Storage</li>
+      <span id="para1"></span>
+      <li>Session Storage</li>
+      <span id="para2"></span>
+    </ul>
+    <hr />
+    <img src="../../Image/storage.png" width="500px" alt="" />
+    <hr />
+
+    <script>
+      // 1. Local Storage
+
+      btn.addEventListener("click", function name(params) {
+        let username = document.getElementById("username").value;
+        let useremail = document.getElementById("useremail").value;
+        let inpData = {
+          username: username,
+          useremail: useremail,
+        };
+        console.log(inpData);
+        
+       localStorage.setItem("dataInput",  JSON.stringify(inpData));
+        let dataLocal = JSON.parse(localStorage.getItem("dataInput"));
+        document.getElementById("para1").innerText = dataLocal.useremail;
+
+        // 2. Local Storage
+        sessionStorage.setItem("dataInput", JSON.stringify(inpData));
+        let dataSession = JSON.parse(sessionStorage.getItem("dataInput"));
+        document.getElementById("para2").innerText = dataSession.username;
+        console.log(dataLocal);
+        console.log(dataSession);
+
+
+        
+        window.location.href = "cart.html"
+      });
+
+    //   localStorage.clear()
+    //   sessionStorage.clear()
+
+
+
+
+
+
+
+
+
+
+
+    // registeredUsers = [
+    //     {},
+    //     {},
+    //     {},
+    //     {},
+    //     {},
+    //     {},
+    //     {},
+    //     {},
+    //     {},
+    //     {},
+        
+    // ]
+    </script>
+  </body>
+</html>
